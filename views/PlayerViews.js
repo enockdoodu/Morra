@@ -56,8 +56,13 @@ exports.WaitingForResults = class extends React.Component {
 
 exports.Total = class extends React.Component {
   render() {
-    // const { total } = this.props;
-    // return <div>Total guess was {total}</div>;
+    const { total } = this.props;
+    console.log(`this is ${total}`);
+    return (
+      <div>
+        <h1>Total guess was {total}</h1>
+      </div>
+    );
   }
 };
 

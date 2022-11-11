@@ -19,7 +19,7 @@ reach.setWalletFallback(
 const intToOutcome = ["PLAYERTWO_WINS", "PLAYERONE_WINS", "DRAW"];
 const { standardUnit } = reach;
 const defaults = { defaultFundAmt: "10", defaultWager: "3", standardUnit };
-let t = 0;
+let t = "0";
 
 class App extends React.Component {
   constructor(props) {
@@ -82,8 +82,8 @@ class Player extends React.Component {
 
   Total(total) {
     console.log(`total is ${total}`);
-    t = total;
-    this.setState({ view: "Done", total: t });
+    t = total.toString();
+    this.setState({ view: "Total", total: t });
   }
   seeOutcome(i) {
     console.log(`t = ${t}`);
